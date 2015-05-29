@@ -21,11 +21,59 @@
  *
  */
 public class Pessoa {
+	// Declaração de atributos:
+	String nome;
+	int idade;
+	String genero;
+	// Bloco de inicialização
+	{
+		nome = "Preencha o nome";
+		idade = 21;
+		genero = "Preencha o genero";
+	}
 
 	/**
-	 * @serialData
+	 * Construtor da classe Pessoa
+	 * 
+	 * @param nome
+	 *            - Nome da pessoa
+	 * @param idade
+	 *            - Em anos, qual é a idade da pessoa
+	 * @param genero
+	 *            - <code>"F"</code> para feminino ou <code>"M"</code> para
+	 *            masculino
 	 */
-	void teste() {
+	public Pessoa(String nome, int idade, String genero) {
+		System.out
+				.println("=========================================================");
+		System.out
+				.println("Criando a classe pessoa... Os Atributos de pessoa receberão novos valores agora:");
+		System.out.println("nome= " + nome);
+		System.out.println("idade= " + idade);
+		System.out.println("genero= " + genero);
+		System.out
+				.println("=========================================================");
+		this.nome = nome;
+		this.genero = genero;
+		this.idade = idade;
+		System.out
+				.println("=========================================================");
+		System.out
+				.println("Criando a classe pessoa... Passamos pela atribuição de valores");
+		System.out.println("nome= " + nome);
+		System.out.println("idade= " + idade);
+		System.out.println("genero= " + genero);
+		System.out
+				.println("=========================================================");
+	}
 
-	};
+	// métodos.
+	/**
+	 * Recupera o nome cadastrado da pessoa
+	 * 
+	 * @return O nome da pessoa armazenado no banco de dados.
+	 */
+	public String getNome() {
+		return nome;
+	}
 }
