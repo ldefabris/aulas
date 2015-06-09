@@ -76,4 +76,12 @@ public class Pessoa {
 	public String getNome() {
 		return nome;
 	}
+
+	public void getProgramaFavorito() {
+		if (genero.equalsIgnoreCase("M")) {
+			System.out.println("Assistir futebol");
+		} else {
+			System.out.println("Comprar no Shopping");
+		}
+	}
 }
