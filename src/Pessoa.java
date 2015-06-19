@@ -31,7 +31,7 @@ public class Pessoa {
 		// TODO Stub de construtor gerado automaticamente
 	}
 
-	// Bloco de inicialização
+	// Bloco de inicialização - Testando a tal da branch
 	{
 		System.out
 				.println("=========================================================");
