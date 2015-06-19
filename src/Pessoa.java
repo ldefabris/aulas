@@ -26,18 +26,25 @@ public class Pessoa {
 	private int idade;
 	private String genero;
 	private boolean vivo = true;
-	
+
 	public Pessoa() {
 		// TODO Stub de construtor gerado automaticamente
 	}
-	
-	
+
 	// Bloco de inicialização
 	{
+		System.out
+				.println("=========================================================");
+		System.out
+				.println("Entrou no bloco de inicialização, atributos receberão valores padrões agora...");
+
 		vivo = true;
 		nome = "Preencha o nome";
 		idade = 21;
 		genero = "Preencha o genero";
+		System.out
+				.println("=========================================================");
+
 	}
 
 	/**
@@ -55,10 +62,18 @@ public class Pessoa {
 		System.out
 				.println("=========================================================");
 		System.out
-				.println("Criando a classe pessoa... Os Atributos de pessoa receberão novos valores agora:");
+				.println("Entramos no construtor da classe pessoa, e foi passado os seguintes construtores: ");
 		System.out.println("nome= " + nome);
 		System.out.println("idade= " + idade);
 		System.out.println("genero= " + genero);
+		System.out
+				.println("=========================================================");
+		System.out
+				.println("Neste momento os atributos possuem os seguintes valores");
+		System.out.println("nome= " + this.nome);
+		System.out.println("idade= " + this.idade);
+		System.out.println("genero= " + this.genero);
+
 		System.out
 				.println("=========================================================");
 		this.nome = nome;
@@ -76,7 +91,7 @@ public class Pessoa {
 	}
 
 	/**
-	Construtor da classe Pessoa
+	 * Construtor da classe Pessoa
 	 * 
 	 * @param nome
 	 *            - Nome da pessoa
@@ -85,7 +100,9 @@ public class Pessoa {
 	 * @param genero
 	 *            - <code>"F"</code> para feminino ou <code>"M"</code> para
 	 *            masculino
-	 * @param estaVivo Informa se a pessoa ainda é viva. <code> true </code> = viva e <code> false </code> falecida. 
+	 * @param estaVivo
+	 *            Informa se a pessoa ainda é viva. <code> true </code> = viva e
+	 *            <code> false </code> falecida.
 	 */
 	public Pessoa(String nome, int idade, String genero, boolean estaVivo) {
 		this(nome, idade, genero);
@@ -181,7 +198,8 @@ public class Pessoa {
 	 *            o nome a ser configurado
 	 */
 	public void setNome(char[] nome) {
-		System.out.println("Passando pelo método que recebe array de char primitivo");
+		System.out
+				.println("Passando pelo método que recebe array de char primitivo");
 		this.nome = new String(nome);
 	}
 
@@ -195,13 +213,13 @@ public class Pessoa {
 		this.nome = nome + " " + sobreNome;
 	}
 
-//	public void setNome(String[] nome) {
-//		System.out
-//				.println("Passando pelo método que recebe um array de String");
-//		for (int i = 0; i < nome.length; i++) {
-//			this.nome += nome[i];
-//		}
-//	}
+	// public void setNome(String[] nome) {
+	// System.out
+	// .println("Passando pelo método que recebe um array de String");
+	// for (int i = 0; i < nome.length; i++) {
+	// this.nome += nome[i];
+	// }
+	// }
 
 	public void setNome(String... sobrenome) {
 		System.out
@@ -213,8 +231,7 @@ public class Pessoa {
 	}
 
 	public void setNome(int codNome) {
-		System.out
-		.println("Passando pelo método que recebe um inteiro");
+		System.out.println("Passando pelo método que recebe um inteiro");
 		String[] nomes = { "pedro", "João", "Maria" };
 		this.nome = nomes[codNome];
 	}
