@@ -26,10 +26,9 @@ public class Pessoa {
 	private int idade;
 	private String genero;
 	private boolean vivo = true;
-	private 
+	public static final int MEDIA_DE_VIDA_EM_ANOS = 120;
 
 	public Pessoa() {
-		// TODO Stub de construtor gerado automaticamente
 	}
 
 	// Bloco de inicialização

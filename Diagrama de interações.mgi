@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="Funcionario" x="21" y="73">
+        <Extension destinationClassName="Pessoa"/>
+    </CommunicationClass>
+    <CommunicationClass name="MeuPrograma" x="97" y="252">
+        <Communication destinationClassName="Funcionario"/>
+        <Communication destinationClassName="Pessoa"/>
+    </CommunicationClass>
+    <CommunicationClass name="ClasseBasica" x="89" y="378"/>
+    <CommunicationClass name="Pessoa" x="227" y="97"/>
+</ClassDiagram>
