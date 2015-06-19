@@ -22,11 +22,19 @@
  */
 public class Pessoa {
 	// Declaração de atributos:
-	String nome;
-	int idade;
-	String genero;
+	private String nome;
+	private int idade;
+	private String genero;
+	private boolean vivo = true;
+	
+	public Pessoa() {
+		// TODO Stub de construtor gerado automaticamente
+	}
+	
+	
 	// Bloco de inicialização
 	{
+		vivo = true;
 		nome = "Preencha o nome";
 		idade = 21;
 		genero = "Preencha o genero";
@@ -67,16 +75,45 @@ public class Pessoa {
 				.println("=========================================================");
 	}
 
+	/**
+	Construtor da classe Pessoa
+	 * 
+	 * @param nome
+	 *            - Nome da pessoa
+	 * @param idade
+	 *            - Em anos, qual é a idade da pessoa
+	 * @param genero
+	 *            - <code>"F"</code> para feminino ou <code>"M"</code> para
+	 *            masculino
+	 * @param estaVivo Informa se a pessoa ainda é viva. <code> true </code> = viva e <code> false </code> falecida. 
+	 */
+	public Pessoa(String nome, int idade, String genero, boolean estaVivo) {
+		this(nome, idade, genero);
+		this.vivo = estaVivo;
+	}
+
 	// métodos.
 	/**
 	 * Recupera o nome cadastrado da pessoa
 	 * 
 	 * @return O nome da pessoa armazenado no banco de dados.
 	 */
-	public String getNome() {
+	private String getNome() {
 		return nome;
 	}
 
+	/**
+	 * imprime no console os atributos da pessoa.
+	 */
+	public void imprimeOsAtributosDaPessoa() {
+		System.out.println("Atributos da pessoa:genero  " + genero);
+		System.out.println("Atributos da pessoa:idade  " + idade);
+		System.out.println("Atributos da pessoa:nome  " + nome);
+	}
+
+	/**
+	 * Imprime no console o programa favorito da pessoa.
+	 */
 	public void getProgramaFavorito() {
 		if (genero.equalsIgnoreCase("M")) {
 			System.out.println("Assistir futebol");
@@ -84,4 +121,102 @@ public class Pessoa {
 			System.out.println("Comprar no Shopping");
 		}
 	}
+
+	/**
+	 * @return o idade
+	 */
+	public int getIdade() {
+		return idade;
+	}
+
+	/**
+	 * @param idade
+	 *            o idade a ser configurado
+	 */
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	/**
+	 * @return o genero
+	 */
+	public String getGenero() {
+		return genero;
+	}
+
+	/**
+	 * @param genero
+	 *            o genero a ser configurado
+	 */
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	/**
+	 * @return o vivo
+	 */
+	public boolean isVivo() {
+		return vivo;
+	}
+
+	/**
+	 * @param vivo
+	 *            o vivo a ser configurado
+	 */
+	public void setVivo(boolean vivo) {
+		this.vivo = vivo;
+	}
+
+	/**
+	 * @param nome
+	 *            o nome a ser configurado
+	 */
+	public void setNome(String nome) {
+		System.out.println("Passando pelo método comum de nome...");
+		this.nome = nome;
+	}
+
+	/**
+	 * @param nome
+	 *            o nome a ser configurado
+	 */
+	public void setNome(char[] nome) {
+		System.out.println("Passando pelo método que recebe array de char primitivo");
+		this.nome = new String(nome);
+	}
+
+	public void setNome(Character[] nome) {
+		System.out.println("Passando pelo método que recebe char Objeto");
+		this.nome = new String(nome.toString());
+	}
+
+	public void setNome(String nome, String sobreNome) {
+		System.out.println("Passando pelo método que recebe nome e sobreNome");
+		this.nome = nome + " " + sobreNome;
+	}
+
+//	public void setNome(String[] nome) {
+//		System.out
+//				.println("Passando pelo método que recebe um array de String");
+//		for (int i = 0; i < nome.length; i++) {
+//			this.nome += nome[i];
+//		}
+//	}
+
+	public void setNome(String... sobrenome) {
+		System.out
+				.println("Passando pelo método que recebe um varArgs de String");
+		this.nome += nome;
+		for (int i = 0; i < sobrenome.length; i++) {
+			this.nome += sobrenome[i];
+		}
+	}
+
+	public void setNome(int codNome) {
+		System.out
+		.println("Passando pelo método que recebe um inteiro");
+		String[] nomes = { "pedro", "João", "Maria" };
+		this.nome = nomes[codNome];
+	}
+
 }
