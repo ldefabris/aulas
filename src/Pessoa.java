@@ -26,12 +26,13 @@ public class Pessoa {
 	private int idade;
 	private String genero;
 	private boolean vivo = true;
+	private 
 
 	public Pessoa() {
 		// TODO Stub de construtor gerado automaticamente
 	}
 
-	// Bloco de inicialização - Testando a tal da branch
+	// Bloco de inicialização
 	{
 		System.out
 				.println("=========================================================");
