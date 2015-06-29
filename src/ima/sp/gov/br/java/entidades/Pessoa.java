@@ -1,3 +1,4 @@
+package ima.sp.gov.br.java.entidades;
 /**
  * Classe responsável pela representação sistemica de pessoa. Esta classe deverá
  * <strong>sempre</strong> ser instanciada no sistema
@@ -213,13 +214,13 @@ public class Pessoa {
 		this.nome = nome + " " + sobreNome;
 	}
 
-	// public void setNome(String[] nome) {
-	// System.out
-	// .println("Passando pelo método que recebe um array de String");
-	// for (int i = 0; i < nome.length; i++) {
-	// this.nome += nome[i];
-	// }
-	// }
+	public void setNome(Object[] nome) {
+		System.out
+				.println("Passando pelo método que recebe um array de Object");
+		for (int i = 0; i < nome.length; i++) {
+			this.nome += nome[i];
+		}
+	}
 
 	public void setNome(String... sobrenome) {
 		System.out
@@ -235,5 +236,4 @@ public class Pessoa {
 		String[] nomes = { "pedro", "João", "Maria" };
 		this.nome = nomes[codNome];
 	}
-
 }

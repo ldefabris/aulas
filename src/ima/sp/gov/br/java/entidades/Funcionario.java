@@ -1,4 +1,9 @@
+package ima.sp.gov.br.java.entidades;
+
 public class Funcionario extends Pessoa {
+	
+
+
 	private String dataDeAdmissao;
 	private double salario;
 

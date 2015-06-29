@@ -1,3 +1,5 @@
+package ima.sp.gov.br.java.entidades;
+
 /**
  * 
  */
@@ -11,7 +13,8 @@ public class Vampiro extends Pessoa {
 
 	public Vampiro(String nome, long idade) {
 		super(nome, 0, null);
-		this.idade = idade;		
+		this.idade = idade;
+
 	}
 
 

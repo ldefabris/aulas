@@ -1,3 +1,5 @@
+import ima.sp.gov.br.java.entidades.Funcionario;
+
 public class MeuPrograma {
 
 	public static void main(String[] args) {
