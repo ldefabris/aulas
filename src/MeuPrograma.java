@@ -27,7 +27,25 @@ public class MeuPrograma {
 				((Vampiro) pessoa).imprimeOsAtributosDaPessoa(true);
 			} else {
 				pessoa.imprimeOsAtributosDaPessoa();
+				imprimeObjeto(pessoa);
 			}
+		}
+	}
+
+	/**
+	 * Imprime um objeto no console
+	 * 
+	 * @param obj
+	 *            obj que será impresso.
+	 */
+	public static void imprimeObjeto(Object obj) {
+		System.out.println(obj.toString());
+		if (obj instanceof Funcionario) {
+			System.out.println("É um funcionário");
+		} else if (obj instanceof Vampiro) {
+			System.out.println("É um Vampiro");
+		} else if (obj instanceof Pessoa) {
+			System.out.println("É uma Pessoa");
 		}
 	}
 }
