@@ -25,12 +25,18 @@ public class Vampiro extends Pessoa {
 		if (vampiro) {
 			System.out
 					.println("===========================  Comportamento exclusivo de vampiros");
-			System.out.println("Atributos da pessoa:idade  " + idade);
+			System.out.println("Atributos da pessoa:idade  " + this.idade);
 			System.out.println("Atributos da pessoa:nome  " + getNome());
 
 		} else {
-			imprimeOsAtributosDaPessoa();
+			super.imprimeOsAtributosDaPessoa();
 		}
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
 	}
 
 }
