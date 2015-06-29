@@ -12,15 +12,22 @@ public class MeuPrograma {
 		funcionario.setSalario(16000);
 		funcionario.setVivo(true);
 		funcionario.setGenero("M");
-		funcionario.getProgramaFavorito();
-		funcionario.imprimeOsAtributosDaPessoa();
 		Pessoa pessoaNormal = new Pessoa("Leonardo", 32, "M", Boolean.TRUE);
-		pessoaNormal.imprimeOsAtributosDaPessoa();
-		pessoaNormal.getProgramaFavorito();
 		Vampiro dracula = new Vampiro(" Vlad Drakul", 3228l);
 		dracula.imprimeOsAtributosDaPessoa(true);
 		dracula.getProgramaFavorito();
-
+		// Pessoa[] arrayDePessoas = { funcionario, pessoaNormal, dracula };
+		Pessoa[] arrayDePessoas = new Pessoa[3];
+		arrayDePessoas[0] = funcionario;
+		arrayDePessoas[1] = pessoaNormal;
+		arrayDePessoas[2] = dracula;
+		for (Pessoa pessoa : arrayDePessoas) {
+			pessoa.getProgramaFavorito();
+			if (pessoa instanceof Vampiro) {
+				((Vampiro) pessoa).imprimeOsAtributosDaPessoa(true);
+			} else {
+				pessoa.imprimeOsAtributosDaPessoa();
+			}
+		}
 	}
-
 }
