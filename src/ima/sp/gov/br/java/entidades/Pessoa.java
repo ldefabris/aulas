@@ -116,7 +116,7 @@ public class Pessoa {
 	 * 
 	 * @return O nome da pessoa armazenado no banco de dados.
 	 */
-	private String getNome() {
+	public String getNome() {
 		return nome;
 	}
 
@@ -236,4 +236,6 @@ public class Pessoa {
 		String[] nomes = { "pedro", "João", "Maria" };
 		this.nome = nomes[codNome];
 	}
+	
+	
 }
