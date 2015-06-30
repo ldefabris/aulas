@@ -41,11 +41,14 @@ public class MeuPrograma {
 	public static void imprimeObjeto(Object obj) {
 		System.out.println(obj.toString());
 		if (obj instanceof Funcionario) {
-			System.out.println("É um funcionário");
+			Funcionario f = (Funcionario) obj;
+			System.out.println(f);
 		} else if (obj instanceof Vampiro) {
-			System.out.println("É um Vampiro");
+			Vampiro v = (Vampiro) obj;
+			System.out.println(v);
 		} else if (obj instanceof Pessoa) {
-			System.out.println("É uma Pessoa");
+			Pessoa p = (Pessoa) obj;
+			System.out.println(p);
 		}
 	}
 }
