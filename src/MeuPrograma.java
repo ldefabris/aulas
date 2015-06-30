@@ -1,6 +1,8 @@
+import ima.sp.gov.br.java.entidades.Adulto;
 import ima.sp.gov.br.java.entidades.Funcionario;
-import ima.sp.gov.br.java.entidades.Pessoa;
 import ima.sp.gov.br.java.entidades.Vampiro;
+import ima.sp.gov.br.java.modelos.Ativista;
+import ima.sp.gov.br.java.modelos.Pessoa;
 
 public class MeuPrograma {
 
@@ -12,23 +14,14 @@ public class MeuPrograma {
 		funcionario.setSalario(16000);
 		funcionario.setVivo(true);
 		funcionario.setGenero("M");
-		Pessoa pessoaNormal = new Pessoa("Leonardo", 32, "M", Boolean.TRUE);
+		Pessoa pessoaNormal = new Adulto("Leonardo", 32, "M", Boolean.TRUE);
 		Vampiro dracula = new Vampiro(" Vlad Drakul", 3228l);
-		dracula.imprimeOsAtributosDaPessoa(true);
-		dracula.getProgramaFavorito();
-		// Pessoa[] arrayDePessoas = { funcionario, pessoaNormal, dracula };
-		Pessoa[] arrayDePessoas = new Pessoa[3];
-		arrayDePessoas[0] = funcionario;
-		arrayDePessoas[1] = pessoaNormal;
-		arrayDePessoas[2] = dracula;
+		Ativista testeAtivista = new Ativista();
+		Pessoa[] arrayDePessoas = { funcionario, pessoaNormal, dracula };
 		for (Pessoa pessoa : arrayDePessoas) {
 			pessoa.getProgramaFavorito();
-			if (pessoa instanceof Vampiro) {
-				((Vampiro) pessoa).imprimeOsAtributosDaPessoa(true);
-			} else {
-				pessoa.imprimeOsAtributosDaPessoa();
-				imprimeObjeto(pessoa);
-			}
+			pessoa.imprimeOsAtributosDaPessoa();
+			imprimeObjeto(pessoa);
 		}
 	}
 
@@ -42,13 +35,13 @@ public class MeuPrograma {
 		System.out.println(obj.toString());
 		if (obj instanceof Funcionario) {
 			Funcionario f = (Funcionario) obj;
-			System.out.println(f);
+			System.out.println(f.toString());
 		} else if (obj instanceof Vampiro) {
 			Vampiro v = (Vampiro) obj;
-			System.out.println(v);
+			System.out.println(v.toString());
 		} else if (obj instanceof Pessoa) {
 			Pessoa p = (Pessoa) obj;
-			System.out.println(p);
+			System.out.println(p.toString());
 		}
 	}
 }

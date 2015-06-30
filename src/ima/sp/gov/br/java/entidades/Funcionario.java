@@ -1,5 +1,7 @@
 package ima.sp.gov.br.java.entidades;
 
+import ima.sp.gov.br.java.modelos.Pessoa;
+
 public class Funcionario extends Pessoa {
 	
 
@@ -35,5 +37,11 @@ public class Funcionario extends Pessoa {
 	 */
 	public void setSalario(double salario) {
 		this.salario = salario;
+	}
+	
+	@Override
+	public void getProgramaFavorito() {
+		System.out.println("Trabalhar mais de 12 horas por dia, e quando sobra tempo: ");
+		super.getProgramaFavorito();
 	}
 }

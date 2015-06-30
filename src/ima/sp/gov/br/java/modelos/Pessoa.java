@@ -1,4 +1,6 @@
-package ima.sp.gov.br.java.entidades;
+package ima.sp.gov.br.java.modelos;
+
+
 /**
  * Classe responsável pela representação sistemica de pessoa. Esta classe deverá
  * <strong>sempre</strong> ser instanciada no sistema
@@ -21,7 +23,7 @@ package ima.sp.gov.br.java.entidades;
  * @author Leonardo Lopes
  *
  */
-public class Pessoa {
+public class Pessoa extends Ativista{
 	// Declaração de atributos:
 	private String nome;
 	private int idade;
@@ -29,7 +31,7 @@ public class Pessoa {
 	private boolean vivo = true;
 	public static final int MEDIA_DE_VIDA_EM_ANOS = 120;
 
-	public Pessoa() {
+	protected Pessoa() {
 	}
 
 	// Bloco de inicialização
@@ -45,7 +47,6 @@ public class Pessoa {
 		genero = "Preencha o genero";
 		System.out
 				.println("=========================================================");
-
 	}
 
 	/**
@@ -59,7 +60,7 @@ public class Pessoa {
 	 *            - <code>"F"</code> para feminino ou <code>"M"</code> para
 	 *            masculino
 	 */
-	public Pessoa(String nome, int idade, String genero) {
+	protected Pessoa(String nome, int idade, String genero) {
 		System.out
 				.println("=========================================================");
 		System.out
@@ -105,7 +106,7 @@ public class Pessoa {
 	 *            Informa se a pessoa ainda é viva. <code> true </code> = viva e
 	 *            <code> false </code> falecida.
 	 */
-	public Pessoa(String nome, int idade, String genero, boolean estaVivo) {
+	protected Pessoa(String nome, int idade, String genero, boolean estaVivo) {
 		this(nome, idade, genero);
 		this.vivo = estaVivo;
 	}

@@ -1,5 +1,7 @@
 package ima.sp.gov.br.java.entidades;
 
+import ima.sp.gov.br.java.modelos.Pessoa;
+
 /**
  * 
  */
@@ -34,9 +36,8 @@ public class Vampiro extends Pessoa {
 	}
 	
 	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+	public void getProgramaFavorito() {
+		System.out.println("Caçar Humanos e roubar Sangue.");
 	}
 
 }
