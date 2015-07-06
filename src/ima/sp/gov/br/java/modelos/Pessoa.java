@@ -20,7 +20,7 @@ package ima.sp.gov.br.java.modelos;
  * tempo de execução recuperar uma annotation. Exemplo de annotations: Autor da
  * classe:
  * 
- * @author Leonardo Lopes
+ * @author Leonardo Lopes 
  *
  */
 public class Pessoa extends Ativista{
