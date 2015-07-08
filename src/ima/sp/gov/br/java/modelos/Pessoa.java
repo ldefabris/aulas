@@ -23,92 +23,39 @@ package ima.sp.gov.br.java.modelos;
  * @author Leonardo Lopes 
  *
  */
-public class Pessoa extends Ativista{
+public abstract class Pessoa implements IAtivista{
 	// Declaração de atributos:
 	private String nome;
 	private int idade;
 	private String genero;
 	private boolean vivo = true;
 	public static final int MEDIA_DE_VIDA_EM_ANOS = 120;
+	private int atividadeCorrente;
+	private int forçaPersonagem;
+	private int velocidadePersonagem;
 
-	protected Pessoa() {
-	}
 
-	// Bloco de inicialização
-	{
-		System.out
-				.println("=========================================================");
-		System.out
-				.println("Entrou no bloco de inicialização, atributos receberão valores padrões agora...");
-
-		vivo = true;
-		nome = "Preencha o nome";
-		idade = 21;
-		genero = "Preencha o genero";
-		System.out
-				.println("=========================================================");
-	}
-
+	
 	/**
-	 * Construtor da classe Pessoa
-	 * 
+	 * Construtor básico para criar uma instancia de pessoa.
 	 * @param nome
-	 *            - Nome da pessoa
 	 * @param idade
-	 *            - Em anos, qual é a idade da pessoa
 	 * @param genero
-	 *            - <code>"F"</code> para feminino ou <code>"M"</code> para
-	 *            masculino
+	 * @param vivo
+	 * @param atividadeCorrente
+	 * @param forçaPersonagem
+	 * @param velocidadePersonagem
 	 */
-	protected Pessoa(String nome, int idade, String genero) {
-		System.out
-				.println("=========================================================");
-		System.out
-				.println("Entramos no construtor da classe pessoa, e foi passado os seguintes construtores: ");
-		System.out.println("nome= " + nome);
-		System.out.println("idade= " + idade);
-		System.out.println("genero= " + genero);
-		System.out
-				.println("=========================================================");
-		System.out
-				.println("Neste momento os atributos possuem os seguintes valores");
-		System.out.println("nome= " + this.nome);
-		System.out.println("idade= " + this.idade);
-		System.out.println("genero= " + this.genero);
-
-		System.out
-				.println("=========================================================");
+	public Pessoa(String nome, int idade, String genero, boolean vivo,
+			int atividadeCorrente, int forçaPersonagem, int velocidadePersonagem) {
+		super();
 		this.nome = nome;
-		this.genero = genero;
 		this.idade = idade;
-		System.out
-				.println("=========================================================");
-		System.out
-				.println("Criando a classe pessoa... Passamos pela atribuição de valores");
-		System.out.println("nome= " + nome);
-		System.out.println("idade= " + idade);
-		System.out.println("genero= " + genero);
-		System.out
-				.println("=========================================================");
-	}
-
-	/**
-	 * Construtor da classe Pessoa
-	 * 
-	 * @param nome
-	 *            - Nome da pessoa
-	 * @param idade
-	 *            - Em anos, qual é a idade da pessoa
-	 * @param genero
-	 *            - <code>"F"</code> para feminino ou <code>"M"</code> para
-	 *            masculino
-	 * @param estaVivo
-	 *            Informa se a pessoa ainda é viva. <code> true </code> = viva e
-	 *            <code> false </code> falecida.
-	 */
-	protected Pessoa(String nome, int idade, String genero, boolean estaVivo) {
-		this(nome, idade, genero);
-		this.vivo = estaVivo;
+		this.genero = genero;
+		this.vivo = vivo;
+		this.atividadeCorrente = atividadeCorrente;
+		this.forçaPersonagem = forçaPersonagem;
+		this.velocidadePersonagem = velocidadePersonagem;
 	}
 
 	// métodos.
@@ -130,16 +77,6 @@ public class Pessoa extends Ativista{
 		System.out.println("Atributos da pessoa:nome  " + nome);
 	}
 
-	/**
-	 * Imprime no console o programa favorito da pessoa.
-	 */
-	public void getProgramaFavorito() {
-		if (genero.equalsIgnoreCase("M")) {
-			System.out.println("Assistir futebol");
-		} else {
-			System.out.println("Comprar no Shopping");
-		}
-	}
 
 	/**
 	 * @return o idade
@@ -237,6 +174,48 @@ public class Pessoa extends Ativista{
 		String[] nomes = { "pedro", "João", "Maria" };
 		this.nome = nomes[codNome];
 	}
+
+
+	/**
+	 * @return the atividadeCorrente
+	 */
+	public int getAtividadeCorrente() {
+		return atividadeCorrente;
+	}
+
+
+	/**
+	 * @param atividadeCorrente the atividadeCorrente to set
+	 */
+	public abstract void setAtividadeCorrente(int atividadeCorrente) ;
+
+
+	/**
+	 * @return the forçaPersonagem
+	 */
+	public int getForçaPersonagem() {
+		return forçaPersonagem;
+	}
+
+
+	/**
+	 * @param forçaPersonagem the forçaPersonagem to set
+	 */
+	public abstract void setForçaPersonagem(int forçaPersonagem) ;
+
+
+	/**
+	 * @return the velocidadePersonagem
+	 */
+	public int getVelocidadePersonagem() {
+		return velocidadePersonagem;
+	}
+
+
+	/**
+	 * @param velocidadePersonagem the velocidadePersonagem to set
+	 */
+	public abstract void setVelocidadePersonagem(int velocidadePersonagem) ;
 	
 	
 }

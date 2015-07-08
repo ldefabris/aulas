@@ -6,6 +6,14 @@ public class Funcionario extends Pessoa {
 	
 
 
+	public Funcionario(String nome, int idade, String genero, boolean vivo,
+			int atividadeCorrente, int forçaPersonagem, int velocidadePersonagem) {
+		super(nome, idade, genero, vivo, atividadeCorrente, forçaPersonagem,
+				velocidadePersonagem);
+		
+		// TODO Auto-generated constructor stub
+	}
+
 	private String dataDeAdmissao;
 	private double salario;
 
@@ -42,6 +50,23 @@ public class Funcionario extends Pessoa {
 	@Override
 	public void getProgramaFavorito() {
 		System.out.println("Trabalhar mais de 12 horas por dia, e quando sobra tempo: ");
-		super.getProgramaFavorito();
+	}
+
+	@Override
+	public void setAtividadeCorrente(int atividadeCorrente) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setForçaPersonagem(int forçaPersonagem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setVelocidadePersonagem(int velocidadePersonagem) {
+		// TODO Auto-generated method stub
+		
 	}
 }
