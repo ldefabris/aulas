@@ -1,5 +1,7 @@
 package ima.sp.gov.br.java.modelos;
 
+import java.util.Date;
+
 
 /**
  * Classe responsável pela representação sistemica de pessoa. Esta classe deverá
@@ -236,6 +238,18 @@ public class Pessoa extends Ativista{
 		System.out.println("Passando pelo método que recebe um inteiro");
 		String[] nomes = { "pedro", "João", "Maria" };
 		this.nome = nomes[codNome];
+	}
+
+	@Override
+	protected void matarPersonagem() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected boolean aindaDeveriaEstarVivo(Date date) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	

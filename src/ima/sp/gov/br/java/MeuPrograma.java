@@ -17,7 +17,7 @@ public class MeuPrograma {
 		funcionario.setGenero("M");
 		Pessoa pessoaNormal = new Adulto("Leonardo", 32, "M", Boolean.TRUE);
 		Vampiro dracula = new Vampiro(" Vlad Drakul", 3228l);
-		Ativista testeAtivista = new Ativista();
+		//Ativista testeAtivista = new Ativista();
 		Pessoa[] arrayDePessoas = { funcionario, pessoaNormal, dracula };
 		for (Pessoa pessoa : arrayDePessoas) {
 			pessoa.getProgramaFavorito();
