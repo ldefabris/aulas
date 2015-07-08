@@ -10,7 +10,7 @@ public class MeuPrograma {
 	public static void main(String[] args) {
 		Funcionario funcionario = new Funcionario();
 		funcionario.setDataDeAdmissao("29/06/2015");
-		funcionario.setNome("João", "Dos Santos", "De Souza");
+		funcionario.setNome("João", "Dos Santos", "De Souza teste");
 		funcionario.setIdade(35);
 		funcionario.setSalario(16000);
 		funcionario.setVivo(true);
